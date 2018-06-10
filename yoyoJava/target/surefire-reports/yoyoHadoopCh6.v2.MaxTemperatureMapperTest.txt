@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: yoyoHadoopCh6.v2.MaxTemperatureMapperTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.937 sec <<< FAILURE! - in yoyoHadoopCh6.v2.MaxTemperatureMapperTest
+processesValidRecord(yoyoHadoopCh6.v2.MaxTemperatureMapperTest)  Time elapsed: 0.864 sec  <<< ERROR!
+java.lang.RuntimeException: org.xml.sax.SAXParseException; systemId: file:/home/yoyohadoop3/IdeaProjects/yoyoJava/target/classes/mapred-site.xml; lineNumber: 2; columnNumber: 6; The processing instruction target matching "[xX][mM][lL]" is not allowed.
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:257)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:150)
+	at org.apache.hadoop.conf.Configuration.parse(Configuration.java:2183)
+	at org.apache.hadoop.conf.Configuration.parse(Configuration.java:2171)
+	at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:2242)
+	at org.apache.hadoop.conf.Configuration.loadResources(Configuration.java:2195)
+	at org.apache.hadoop.conf.Configuration.getProps(Configuration.java:2112)
+	at org.apache.hadoop.conf.Configuration.get(Configuration.java:858)
+	at org.apache.hadoop.conf.Configuration.getStrings(Configuration.java:1695)
+	at org.apache.hadoop.io.serializer.SerializationFactory.<init>(SerializationFactory.java:58)
+	at org.apache.hadoop.mrunit.internal.io.Serialization.copyWithConf(Serialization.java:109)
+	at org.apache.hadoop.mrunit.TestDriver.copy(TestDriver.java:675)
+	at org.apache.hadoop.mrunit.TestDriver.copyPair(TestDriver.java:679)
+	at org.apache.hadoop.mrunit.MapDriverBase.addInput(MapDriverBase.java:120)
+	at org.apache.hadoop.mrunit.MapDriverBase.withInput(MapDriverBase.java:210)
+	at yoyoHadoopCh6.v2.MaxTemperatureMapperTest.processesValidRecord(MaxTemperatureMapperTest.java:18)
+
